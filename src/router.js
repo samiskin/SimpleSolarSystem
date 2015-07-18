@@ -1,11 +1,11 @@
 
-var HelloWorld = require('HelloWorld.jsx');
+var App = require('App.jsx');
 
 var Router = require('react-router');
 var Route = Router.Route;
 
 var routes = (
-    <Route path={"/"} handler={HelloWorld}>
+    <Route path={"/"} handler={App}>
     </Route>
 );
 
