@@ -1,0 +1,25 @@
+@import 'styles/variables';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.Overlay {
+  & {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: $overlayIndex;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    color: white;
+    font-family: 'Open Sans';
+  }
+
+  &-title {
+    font-size: 30;
+  }
+
+  &-content {
+    font-size: 25;
+  }
+}
