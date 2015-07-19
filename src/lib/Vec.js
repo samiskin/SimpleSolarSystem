@@ -1,5 +1,4 @@
 
-
 export default class Vec {
   x = 0;
   y = 0;
