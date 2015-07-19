@@ -5,7 +5,8 @@ var Router = require('react-router');
 var Route = Router.Route;
 
 var routes = (
-    <Route path={"/SimpleSolarSystem/"} handler={App}>
+    <Route path={"/"} handler={App}>
+      <Route path={"SimpleSolarSystem/"} handler={App} />
     </Route>
 );
 

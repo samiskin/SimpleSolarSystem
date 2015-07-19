@@ -14,7 +14,7 @@ export default class Overlay extends React.Component {
 
   updatedState() {
     return {
-      planetScale: DataStore.getPlanetScale() / 10000,
+      planetScale: DataStore.getPlanetScale() * 10000,
       spaceScale: DataStore.getSpaceScale(),
       date: DataStore.getCurrentDate()
     }
@@ -26,12 +26,15 @@ export default class Overlay extends React.Component {
       date.getUTCFullYear() +"/"+
       ("0" + (date.getUTCMonth()+1)).slice(-2) +"/"+
       ("0" + date.getUTCDate()).slice(-2);
+
+    var spaceString = ("" + (1/this.state.spaceScale)).slice(0, 7);
+    var planetString = ("" + (1/this.state.planetScale)).slice(0, 7);
     return (
       <div className="Overlay">
         <div className="Overlay-title"></div>
         <div className="Overlay-content">
-          <b>Planets</b>: 1px = {this.state.planetScale} AU<br/>
-          <b>Space</b>: 1px = {this.state.spaceScale} AU<br/>
+          <b>Planets</b>: 1px = {planetString} AU<br/>
+          <b>Space</b>: 1px = {spaceString} AU<br/>
           <b>Date</b>: {dateString}
         </div>
 
